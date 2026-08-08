@@ -1,0 +1,6 @@
+pytest
+langcodes[data]
+langdetect
+pytesseract
+Pillow
+fonttools

@@ -1,0 +1,10 @@
+dist
+build
+*.egg-info
+__pycache__
+.pytest_cache
+
+# This project's own runtime artifacts -- not build artifacts, but
+# equally not something that belongs in version control
+corpora
+output
