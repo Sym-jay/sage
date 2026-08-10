@@ -1,0 +1,35 @@
+# Virtual environments -- gigabytes of installed packages, never commit
+venv/
+venv-dev/
+venv-clean/
+.venv/
+
+# Python bytecode / build artifacts
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Generated images (regenerable via `gen-para`) and OCR datasets --
+# thousands of files, large, and not meaningful to diff/version
+language_identifier/output/
+finetuning/output/
+**/output/images/
+
+# Dataset manifests reference absolute, machine-specific paths and are
+# regenerable via prepare_dataset.py -- not meaningful to commit
+dataset_manifest*.csv
+
+# Model checkpoints -- multi-gigabyte, exceeds GitHub's 100MB per-file
+# limit, and is regenerable via extend_tokeniser.py / the training
+# script. Track these on HuggingFace Hub or similar instead, if needed.
+trocr-extended/
+*.safetensors
+*.bin
+checkpoints/
+
+# OS/editor cruft
+.DS_Store
+*.swp
